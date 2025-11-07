@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Gift Card</title>
+  <link rel="shortcut icon" href="../img/flipkart_favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Progress Bar Styles */
+    #progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      z-index: 99990;
+    }
+
+    #progress-bar {
+      height: 53%;
+      width: 0;
+      background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
+      box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+      transition: width 0.09s ease-in-out;
+      border-radius: 10px;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .navbar .logo .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .navbar .search-bar input {
+      padding: 5px 10px;
+      width: 300px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .navbar .links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007bff;
+      font-size: 16px;
+    }
+
+    .navbar .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Info Section Styles */
+    .info {
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .info .head {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .info .detail {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Gift Card Section Styles */
+    .gift-card-section {
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .gift-card-section h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .gift-card-section form {
+      margin-bottom: 20px;
+    }
+
+    .gift-card-section label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .gift-card-section select {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+
+    .gift-card-section button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .gift-card-section button:hover {
+      background-color: #0056b3;
+    }
+
+    .gift-card-section .preview {
+      margin-top: 20px;
+    }
+
+    .gift-card-section .preview h2 {
+      font-size: 20px;
+    }
+
+    /* Footer Styles */
+    #footer-giftCard {
+      height: 100px;
+      background-color: #292d33;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+  <div class="navbar">
+    <div class="logo">
+      <div class="title">Flipkart Plus</div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products, brands and more">
+    </div>
+    <div class="links">
+      <a href="../index.html">Home</a>
+      <a href="../gift-cards/index.html">Gift Cards</a>
+      <a href="../supercoin/index.html">SuperCoin</a>
+      <a href="../helpcentre/index.html">Support</a>
+    </div>
+  </div>
+
+  <div class="info">
+    <h1 class="head">Gift Card Store</h1>
+    <div class="detail">
+      Special occasions call for special gifts. Whether it's a birthday or an anniversary, finding the right gift for
+      your loved ones is always a difficult task. And after you get a gift, you have to hope that they like what you
+      got. Well, there’s a simple solution to this conundrum - Flipkart Gift Cards Store. You can give Flipkart gift
+      cards and Vouchers across multiple occasions to your friends or family and give them the chance to shop for
+      whatever their heart desires. So, what are you waiting for? Get gift vouchers online on Flipkart, gift or redeem
+      them and do more with this feature. Flipkart Gift Card Store also has a wide range of Gift Cards from categories
+      such as travel, jewellery, fashion, grocery, and apps &amp; more. You can choose from a diverse range of
+      denominations available or enter any preferred amount between Rs 25 to Rs 10,000. Bid adieu to gifting troubles,
+      send online gift cards to your friends and family, bring a smile to their faces and make special moments even more
+      special!. The information you are reading has been last updated on 17-May-24.
+    </div>
+  </div>
+
+  <div class="gift-card-section">
+    <h1>Flipkart Gift Card</h1>
+    <form id="giftCardForm">
+      <label for="amount">Select Amount:</label>
+      <select id="amount" name="amount">
+        <option value="500">₹500</option>
+        <option value="1000">₹1000</option>
+        <option value="2000">₹2000</option>
+        <option value="5000">₹5000</option>
+      </select>
+      <button type="submit">Buy Now</button>
+    </form>
+    <div class="preview">
+      <h2>Gift Card Preview</h2>
+      <p>Amount: <span id="selectedAmount">₹500</span></p>
+    </div>
+  </div>
+
+  <div id="footer-giftCard"></div>
+</body>
+
+</html>
